@@ -1,11 +1,8 @@
 class Spaceship{
-  protected double myCenterX, myCenterY;
-  protected double myDirectionX,myDirectionY;
-  protected double myPointDirection;
-  protected int corners;
+  protected double myCenterX, myCenterY, myDirectionX,myDirectionY, myPointDirection;
+  protected int corners, myColor;
   protected int[] xCorners;
   protected int[] yCorners;
-  protected int myColor;
   public Spaceship(){
     corners=3;
     xCorners=new int[]{-8,16,-8};
