@@ -7,8 +7,9 @@ class Spaceship{
     corners=3;
     xCorners=new int[]{-8,16,-8};
     yCorners=new int[]{-8,0,8};
+    myColor=255;
   }
-  public void show (){             
+  public void show (){
     fill(myColor);   
     stroke(myColor);
     translate((float)myCenterX, (float)myCenterY);  
@@ -22,5 +23,13 @@ class Spaceship{
     endShape(CLOSE);
     rotate(-1*dRadians);
     translate(-1*(float)myCenterX, -1*(float)myCenterY);
-  }   
+  }
+  public void setPointDirection(double sp){
+    myPointDirection=sp;
+  }
+  public void hyperspace(){
+    myCenterX=(int)(Math.random()*500-100);
+    myCenterY=(int)(Math.random()*500-100);
+    myPointDirection=(int)(Math.random()*361);
+  }
 }
